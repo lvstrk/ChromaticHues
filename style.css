@@ -12,46 +12,69 @@
 body {
     display: flex;
     background-image: linear-gradient(to right, #F2E2DC, #F2DFBB, #AB8BD9);
-    
+
 }
 
 /*- - - - - Styles Font - - - - - */
 
-h1{
+h1 {
     font-family: micro 5;
     font-size: 60px;
     color: #7350BF;
+    font-family: 'Micro 5';
 }
 
-p{
+p {
     font-family: Concert One;
     font-size: 17px;
     color: #7350BF;
 }
 
-li{
+li {
     font-family: Concert One;
     font-size: 17px;
-    color: #7350BF 
+    color: #7350BF
 }
 
 /*- - - - - Nav bar - - - - - */
 
 
+
 /*- - - - - Jumbotron - - - - - */
 
-.cd{
-animation-name: cd_animation;
-animation-duration: 1s;
-animation-iteration-count: infinite;
-animation-timing-function: linear;
+.cd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: cd_animation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
 @keyframes cd_animation {
     0% {
-    transform: rotateZ(0deg);
+        transform: rotateZ(0deg);
     }
+
     100% {
-    transform: rotateZ(360deg);
+        transform: rotateZ(360deg);
     }
+}
+/*- - - - - Main - - - - - */
+
+.blue{
+    display: flex;
+}
+
+.yellow{
+    display: flex;
+}
+
+red{
+    display: flex;
+}
+
+.green{
+    display: flex;
 }
