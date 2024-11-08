@@ -1,4 +1,13 @@
 /*- - - - - Styles - - - - - */
+* {
+    box-sizing: border-box;
+    margin: unset;
+    padding: unset;
+    border: unset;
+    outline: unset;
+    list-style: none;
+    text-decoration: none;
+}
 
 body {
     display: flex;
@@ -6,7 +15,7 @@ body {
     
 }
 
-/*- - - - - Styles - - - - - */
+/*- - - - - Styles Font - - - - - */
 
 h1{
     font-family: micro 5;
@@ -24,4 +33,25 @@ li{
     font-family: Concert One;
     font-size: 17px;
     color: #7350BF 
+}
+
+/*- - - - - Nav bar - - - - - */
+
+
+/*- - - - - Jumbotron - - - - - */
+
+.cd{
+animation-name: cd_animation;
+animation-duration: 1s;
+animation-iteration-count: infinite;
+animation-timing-function: linear;
+}
+
+@keyframes cd_animation {
+    0% {
+    transform: rotateZ(0deg);
+    }
+    100% {
+    transform: rotateZ(360deg);
+    }
 }
