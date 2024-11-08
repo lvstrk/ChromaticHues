@@ -1,4 +1,27 @@
 /*- - - - - Styles - - - - - */
+
 body {
+    display: flex;
     background-image: linear-gradient(to right, #F2E2DC, #F2DFBB, #AB8BD9);
+    
+}
+
+/*- - - - - Styles - - - - - */
+
+h1{
+    font-family: micro 5;
+    font-size: 60px;
+    color: #7350BF;
+}
+
+p{
+    font-family: Concert One;
+    font-size: 17px;
+    color: #7350BF;
+}
+
+li{
+    font-family: Concert One;
+    font-size: 17px;
+    color: #7350BF 
 }
