@@ -49,8 +49,6 @@ li {
 
 /*- - - - - Jumbotron - - - - - */
 
-.jumbotron {}
-
 .jumbotron ul {
     display: flex;
     align-content: center;
