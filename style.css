@@ -15,7 +15,7 @@ body {
     overflow-y: hidden;
     overflow-x: hidden;
     display: flex;
-    background-image: linear-gradient(to left, #F2E2DC, #F2DFBB, #AB8BD9);
+    background-image: repeating-linear-gradient(to left, #F2E2DC, #F2DFBB, #AB8BD9);
 }
 
 /*- - - - - Styles Font - - - - - */
@@ -44,25 +44,38 @@ li {
 .nav {
     writing-mode: vertical-lr;
     display: flex;
-    align-items: center;
-    padding: 20px;
-    gap: 50px;
     z-index: 100;
+    height: 100vh;
+    text-align: center;
+}
+
+.box {
+    width: 84px;
+    height: 100vh;
+    background-color: #F2E2DC;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 .nav_bar ul {
-    /* display: inline-block;; */
+    text-align: center;
     display: flex;
+    flex-direction: column;
     list-style: none;
-
-    gap: 36px;
+    gap: 130px;
+    padding: 10px;
 }
 
-.nav_bar ul {
+.nav_bar ul li {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
     cursor: pointer;
     position: relative;
     overflow: hidden;
     transition: .3s;
+    text-align: center;
 }
 
 .nav_bar ul li:before {
@@ -95,39 +108,56 @@ ul:hover li:before {
     transition: .2s .2s, scale 0s .4s;
 }
 
-
 /* - - - - - Section Scrolling - - - -  */
 #section-scrolling {
     display: flex;
 }
+
 /*- - - - - Jumbotron - - - - - */
 
-.blue :hover {
+.blue,
+.yellow,
+.red,
+.green {
+    transition: all 0.3s ease-in-out;
+    margin: 25px;
+}
+
+
+.blue:hover {
     color: #94BDF2;
     transform: scale(1.1);
 }
 
-.yellow :hover {
+.yellow:hover {
     color: #F2CB05;
     transform: scale(1.1);
 }
 
-.red :hover {
+.red:hover {
     color: #F23D3D;
     transform: scale(1.1);
 }
 
-.green :hover {
+.green:hover {
     color: #0F8C3B;
     transform: scale(1.1);
 }
 
-.jumbotron {
-    width: 800px;
-}
-
 .jumbotron ul {
     display: flex;
+    align-content: center;
+}
+
+.jumbotron {
+    display: flex;
+    justify-content: space-between;
+    gap: 84px;
+    text-align: center;
+    margin-left: 100px;
+}
+
+.jumbotron_text {
     align-content: center;
 }
 
