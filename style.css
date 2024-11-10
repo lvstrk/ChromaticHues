@@ -11,8 +11,9 @@
 
 html,
 body {
-    height: 100%;
-    overflow-y: scroll;
+    height: 100vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
     display: flex;
     background-image: linear-gradient(to left, #F2E2DC, #F2DFBB, #AB8BD9);
 }
@@ -40,11 +41,21 @@ li {
 
 /*- - - - - Nav bar - - - - - */
 
+.nav {
+    writing-mode: vertical-lr;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    gap: 50px;
+    z-index: 100;
+}
+
 .nav_bar ul {
-    display: inline-block;;
+    /* display: inline-block;; */
+    display: flex;
     list-style: none;
-    padding: 0;
-    margin: 0;
+
+    gap: 36px;
 }
 
 .nav_bar ul {
@@ -54,30 +65,41 @@ li {
     transition: .3s;
 }
 
-  .nav_bar ul li:before {
+.nav_bar ul li:before {
     content: "";
     position: absolute;
-    inset: calc(100% - 3px) 0 0 0; /* 3px = the thickness */
-    background: #94BDF2; /* the color */
+    inset: calc(100% - 3px) 0 0 0;
+    /* 3px = the thickness */
+    background: #94BDF2;
+    /* the color */
     scale: 0 1;
     transition: .3s, translate 0s .3s;
-  }
-  ul:hover li:before {
+}
+
+ul:hover li:before {
     scale: 1;
-  }
-  .nav_bar ul li:hover:before {
+}
+
+.nav_bar ul li:hover:before {
     translate: 0;
     transition: .3s;
-  }
-  .nav_bar ul:hover li:has(~ li:hover):before {
+}
+
+.nav_bar ul:hover li:has(~ li:hover):before {
     translate: 100% 0;
-    transition: .2s .2s,scale 0s .4s;
-  }
-  .nav_bar ul:hover li:hover ~ li:before {
+    transition: .2s .2s, scale 0s .4s;
+}
+
+.nav_bar ul:hover li:hover~li:before {
     translate: -100% 0;
-    transition: .2s .2s,scale 0s .4s;
-  }
-  
+    transition: .2s .2s, scale 0s .4s;
+}
+
+
+/* - - - - - Section Scrolling - - - -  */
+#section-scrolling {
+    display: flex;
+}
 /*- - - - - Jumbotron - - - - - */
 
 .blue :hover {
@@ -98,6 +120,10 @@ li {
 .green :hover {
     color: #0F8C3B;
     transform: scale(1.1);
+}
+
+.jumbotron {
+    width: 800px;
 }
 
 .jumbotron ul {
@@ -130,5 +156,21 @@ li {
 /*- - - - - Main - - - - - */
 
 .album {
-    height: 300px;
+    height: 100%;
+    width: 100vw;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(auto-fill, minmax(150px, 150px));
+    grid-auto-columns: 150px;
+    /* display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: start; */
+}
+
+/* - - - - - Canciones - - - - - - */
+
+.song {
+    width: 150px;
+    height: 150px;
 }
